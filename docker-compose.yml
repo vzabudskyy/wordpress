@@ -36,7 +36,7 @@ services:
   webserver:
     depends_on:
       - wordpress
-    entrypoint: sh pre.sh
+    command: systemctl stop apache2
     image: nginx:1.15.12-alpine
     container_name: webserver
     restart: unless-stopped
